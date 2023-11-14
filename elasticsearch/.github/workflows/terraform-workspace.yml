@@ -26,9 +26,10 @@ jobs:
             "clientSecret": "${{ secrets.CLIENT_SECRET }}",
             "subscriptionId": "${{ secrets.SUBSCRIPTION_ID }}",
             "tenantId": "${{ secrets.TENANT_ID }}"
+            "root_path": '../elasticsearch'
           }
     - name: Terraform worklow
-      working-directory: $elasticsearch
+      working-directory: ${{ env.root_path }}
       run: |
         terraform init
         terraform plan
