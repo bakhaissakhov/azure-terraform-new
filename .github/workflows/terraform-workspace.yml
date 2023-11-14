@@ -1,0 +1,36 @@
+name: Terraform
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  terraform:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Terraform
+      uses: hashicorp/setup-terraform@v1
+
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: |
+          {
+            "clientId": "${{ secrets.CLIENT_ID }}",
+            "clientSecret": "${{ secrets.CLIENT_SECRET }}",
+            "subscriptionId": "${{ secrets.SUBSCRIPTION_ID }}",
+            "tenantId": "${{ secrets.TENANT_ID }}"
+            "root_path": '../elasticsearch'
+          }
+    - name: Terraform worklow
+      working-directory: ${{ env.root_path }}
+      run: |
+        terraform init
+        terraform plan
+        terraform apply -auto-approve
