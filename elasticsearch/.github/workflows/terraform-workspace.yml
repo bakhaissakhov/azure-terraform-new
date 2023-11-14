@@ -27,13 +27,10 @@ jobs:
             "subscriptionId": "${{ secrets.SUBSCRIPTION_ID }}",
             "tenantId": "${{ secrets.TENANT_ID }}"
           }
-
-    - name: Terraform Init
-      run: terraform init
-
-    - name: Terraform Plan
-      run: terraform plan
-
-    - name: Terraform Apply
-      if: github.ref == 'refs/heads/main'
-      run: terraform apply -auto-approve
+    - name: 
+    - name: Terraform worklow
+      working-directory: elasticsearch
+      run: |
+        terraform init
+        terraform plan
+        terraform apply -auto-approve
