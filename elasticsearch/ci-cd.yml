@@ -27,9 +27,9 @@ jobs:
             "subscriptionId": "${{ secrets.SUBSCRIPTION_ID }}",
             "tenantId": "${{ secrets.TENANT_ID }}"
           }
-    - name: 
+
     - name: Terraform worklow
-      working-directory: elasticsearch
+      working-directory: $elasticsearch
       run: |
         terraform init
         terraform plan
