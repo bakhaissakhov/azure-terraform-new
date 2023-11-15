@@ -2,8 +2,8 @@ name: 'Terraform'
 
 on:
   push:
-    paths:
-      - 'azure-terraform-new/elasticsearch/**'
+    branches:
+      - main
 
 jobs:
   terraform:
