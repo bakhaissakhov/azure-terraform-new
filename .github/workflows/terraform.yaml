@@ -26,8 +26,9 @@ jobs:
         working-directory: ./elasticsearch
 
       - name: Terraform Plan
-        run: terraform plan
+        run: terraform plan -no-color
         working-directory: ./elasticsearch
+
 
 
       # - name: Terraform Apply
