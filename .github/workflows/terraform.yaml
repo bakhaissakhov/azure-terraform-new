@@ -15,6 +15,17 @@ jobs:
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
+      
+      - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: |
+          {
+            "clientId": "${{ secrets.CLIENT_ID }}",
+            "clientSecret": "${{ secrets.CLIENT_SECRET }}",
+            "subscriptionId": "${{ secrets.SUBSCRIPTION_ID }}",
+            "tenantId": "${{ secrets.TENANT_ID }}"
+          }
 
       # - run: | 
       #     # pwd
@@ -30,8 +41,8 @@ jobs:
       # - name: Terraform Apply
       #   run: terraform apply -auto-approve
       #   working-directory: ./elasticsearch
-        env:
-          ARM_TENANT_ID: ${{ secrets.TENANT_ID }}
-          ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
-          ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
-          ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
+        # env:
+        #   ARM_TENANT_ID: ${{ secrets.TENANT_ID }}
+        #   ARM_SUBSCRIPTION_ID: ${{ secrets.SUBSCRIPTION_ID }}
+        #   ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
+        #   ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
