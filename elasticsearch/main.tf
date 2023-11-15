@@ -39,7 +39,3 @@ resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
     # Add other tags as needed
   }
 }
-
-
-
-
