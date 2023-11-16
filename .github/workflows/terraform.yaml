@@ -29,6 +29,10 @@ jobs:
         run: terraform plan -no-color
         working-directory: ./servicebus
 
+      - name: Terraform Apply
+        run: terraform apply --auto-approve 
+        working-directory: ./servicebus  
+
 
 
       # - name: Terraform Apply
