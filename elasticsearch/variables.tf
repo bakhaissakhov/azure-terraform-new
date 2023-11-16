@@ -1,22 +1,26 @@
-# variable "tenant_id" {
-#   type        = string
-#   description = "(optional) describe your variable"
-# }
+variable "tenant_id" {
+  type        = string
+  description = "(optional) describe your variable"
+  default = ""
+}
 
-# variable "subscription_id" {
-#   type        = string
-#   description = "(optional) describe your variable"
-# }
+variable "subscription_id" {
+  type        = string
+  description = "(optional) describe your variable"
+  default = ""
+}
 
-# variable "client_id" {
-#   type        = string
-#   description = "(optional) describe your variable"
-# }
+variable "client_id" {
+  type        = string
+  description = "(optional) describe your variable"
+  default = ""
+}
 
-# variable "client_secret" {
-#   type        = string
-#   description = "(optional) describe your variable"
-# }
+variable "client_secret" {
+  type        = string
+  description = "(optional) describe your variable"
+  default = ""
+}
 
 variable "application_name" {
   type        = list(string)
