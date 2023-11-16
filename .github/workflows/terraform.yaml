@@ -26,12 +26,12 @@ jobs:
         working-directory: ./servicebus
 
       - name: Terraform Plan
-        run: terraform plan -destroy 
+        run: terraform plan  
         working-directory: ./servicebus
 
-      # - name: Terraform Apply
-      #   run: terraform apply --auto-approve 
-      #   working-directory: ./servicebus  
+      - name: Terraform Apply
+        run: terraform apply --auto-approve 
+        working-directory: ./servicebus  
       
       # - name: Terraform Destroy
       #   run: terraform destroy --auto-approve 

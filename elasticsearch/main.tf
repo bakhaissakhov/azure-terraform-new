@@ -39,12 +39,3 @@ resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
     # Add other tags as needed
   }
 }
-
-# data "azurerm_servicebus_namespace" "example" {
-#   name                = "examplenamespacemmm"
-#   resource_group_name = var.rg_name
-# }
-
-# output "location" {
-#   value = data.azurerm_servicebus_namespace.examplenamespacemmm.location
-# }
