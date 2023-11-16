@@ -26,7 +26,7 @@ jobs:
         working-directory: ./servicebus
 
       - name: Terraform Plan
-        run: terraform plan -no-color
+        run: terraform plan -destroy -no-color
         working-directory: ./servicebus
 
       # - name: Terraform Apply
