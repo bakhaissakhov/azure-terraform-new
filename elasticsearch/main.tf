@@ -25,26 +25,26 @@ provider "azurerm" {
 }
 
 
-# resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
-#   # (Other properties like name, location, resource group name, etc.)
-#   name                        = "test-es-xxx"
-#   resource_group_name         = var.rg_name
-#   location                    = "westus2"
-#   sku_name                    = "ess-consumption-2024_Monthly@TIDgmz7xq9ge3py"
-#   elastic_cloud_email_address = "bakha87@gmail.com"
-#   # monitoring_enabled = false
-#   tags = {
-#     "Environment" = "dev"
-#     "Project"     = "example"
-#     # Add other tags as needed
-#   }
+resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
+  # (Other properties like name, location, resource group name, etc.)
+  name                        = "test-es-xxx"
+  resource_group_name         = var.rg_name
+  location                    = "westus2"
+  sku_name                    = "ess-consumption-2024_Monthly@TIDgmz7xq9ge3py"
+  elastic_cloud_email_address = "bakha87@gmail.com"
+  # monitoring_enabled = false
+  tags = {
+    "Environment" = "dev"
+    "Project"     = "example"
+    # Add other tags as needed
+  }
+}
+
+# data "azurerm_servicebus_namespace" "example" {
+#   name                = "examplenamespacemmm"
+#   resource_group_name = var.rg_name
 # }
 
-data "azurerm_servicebus_namespace" "example" {
-  name                = "examplenamespacemmmmmmmmmmm"
-  resource_group_name = var.rg_name
-}
-
-output "location" {
-  value = data.azurerm_servicebus_namespace.example.location
-}
+# output "location" {
+#   value = data.azurerm_servicebus_namespace.examplenamespacemmm.location
+# }
