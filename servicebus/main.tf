@@ -21,7 +21,7 @@ provider "azurerm" {
 }
 
 resource "azurerm_servicebus_namespace" "example" {
-  name                = "tfex-servicebus-namespace"
+  name                = "servicebus-sandbox-namespace-xxx"
   location            = var.ec-location
   resource_group_name = var.ec-rg
   sku                 = "Standard"
