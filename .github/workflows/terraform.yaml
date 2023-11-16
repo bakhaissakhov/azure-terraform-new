@@ -21,9 +21,9 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v1
 
-      # - name: Terraform Init
-      #   run: terraform init
-      #   working-directory: ./servicebus
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./servicebus
 
       # - name: Terraform Plan
       #   run: terraform plan -no-color
@@ -33,7 +33,7 @@ jobs:
       #   run: terraform apply --auto-approve 
       #   working-directory: ./servicebus  
       
-      - name: Terraform Apply
+      - name: Terraform Destroy
         run: terraform destroy --auto-approve 
         working-directory: ./servicebus 
 
