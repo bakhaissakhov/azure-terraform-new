@@ -25,14 +25,14 @@ jobs:
         run: terraform init
         working-directory: ./servicebus
 
-      # - name: Terraform Plan
-      #   run: terraform plan  
-      #   working-directory: ./servicebus
+      - name: Terraform Plan
+        run: terraform plan  
+        working-directory: ./servicebus
 
-      - name: Terraform Apply
-        if: github.ref == 'refs/heads/main'
-        run: terraform apply --auto-approve 
-        working-directory: ./servicebus  
+      # - name: Terraform Apply
+      #   if: github.ref == 'refs/heads/main'
+      #   run: terraform apply --auto-approve 
+      #   working-directory: ./servicebus  
       
       # - name: Terraform Destroy
       #   run: terraform destroy --auto-approve 
