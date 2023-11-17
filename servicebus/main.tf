@@ -8,7 +8,7 @@ terraform {
 
   backend "azurerm" {
     resource_group_name = "rg-sp-terraform"
-    storage_account_name = "sandboxtfstate2023 "
+    storage_account_name = "sandboxtfstate2023"
     container_name = "tfstate-container"
     key = "tfstate-sandbox"
   }
