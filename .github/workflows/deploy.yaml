@@ -28,7 +28,20 @@ jobs:
       - name: Terraform Plan
         run: terraform plan  
         working-directory: ./servicebus
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v1
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: ./elasticsearch
+
+      - name: Terraform Plan
+        run: terraform plan  
+        working-directory: ./elasticsearch
       # - name: Terraform Apply
       #   if: github.ref == 'refs/heads/main'
       #   run: terraform apply --auto-approve 

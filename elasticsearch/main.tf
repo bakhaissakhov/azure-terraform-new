@@ -31,7 +31,7 @@ resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
   resource_group_name         = var.rg_name
   location                    = "westus2"
   sku_name                    = "ess-consumption-2024_Monthly@TIDgmz7xq9ge3py"
-  elastic_cloud_email_address = "example@email.com"
+  elastic_cloud_email_address = "bakha87@gmail.com"
   # monitoring_enabled = false
   tags = {
     "Environment" = "dev"
