@@ -27,6 +27,6 @@ resource "azurerm_servicebus_namespace" "example" {
   sku                 = "Standard"
 
   tags = {
-    source = "terra"
+    source = "terraform"
   }
 }
