@@ -35,6 +35,7 @@ resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
   # monitoring_enabled = false
   tags = {
     "Environment" = "dev"
+    "Appr" = "Bake"
     # Add other tags as needed
   }
 }
