@@ -51,7 +51,7 @@ jobs:
     if: ${{ needs.changed_dirs.outputs.run_sb == 'true' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - run: echo ${{ needs.changed_dirs.outputs.run_sb }} 
 
       - name: Setup Terraform
@@ -80,7 +80,7 @@ jobs:
     if: ${{ needs.changed_dirs.outputs.run_es == 'true' }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - run: echo ${{ needs.changed_dirs.outputs.run_es }}   
         
