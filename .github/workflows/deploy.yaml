@@ -97,7 +97,7 @@ jobs:
         run: terraform plan  
         working-directory: ./elasticsearch
 
-      - name: Terraform Apply
+      - name: Terraform Destoy
         if: github.ref == 'refs/heads/main'
         run: terraform apply --auto-approve 
         working-directory: ./elasticsearch 
