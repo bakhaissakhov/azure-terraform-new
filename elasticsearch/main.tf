@@ -34,7 +34,8 @@ resource "azurerm_elastic_cloud_elasticsearch" "cloud_elasticsearch" {
   elastic_cloud_email_address = "bakha87@gmail.com"
   # monitoring_enabled = false
   tags = {
-    "Environment" = "test"
+    "Environment" = "dev"
+    # "Environment" = "test"
     # Add other tags as needed
   }
 }
